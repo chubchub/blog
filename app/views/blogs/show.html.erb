@@ -1,0 +1,27 @@
+<p>
+  <b>Title:</b>
+  <%=h @blog.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @blog.body %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%=h @blog.tags %>
+</p>
+
+<p>
+  <b>Views:</b>
+  <%=h @blog.views %>
+</p>
+
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Back', blogs_path %>
+
+<div id='show-comments'>
+	<%= render(:partial => 'comments/comment', :collection => @blog.comments) %>
+</div>
+<%= render(:partial => 'comments/new') -%>

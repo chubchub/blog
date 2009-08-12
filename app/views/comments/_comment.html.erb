@@ -1,0 +1,8 @@
+<p style='border:1px solid black; width: 90%'>
+  <b>by :</b>
+  <%=h comment.email %> | <%=link_to(comment.website) %>
+  <br><%= comment.created_at -%>
+  
+  <br>
+  <i><%=h comment.body %></i>
+</p>

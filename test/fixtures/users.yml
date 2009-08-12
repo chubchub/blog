@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  login: MyString
+  password: MyString
+  age: 1
+  name: MyString
+  last_login: 2009-04-02
+
+two:
+  login: MyString
+  password: MyString
+  age: 1
+  name: MyString
+  last_login: 2009-04-02

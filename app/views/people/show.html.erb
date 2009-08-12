@@ -1,0 +1,28 @@
+<p>
+  <b>Login:</b>
+  <%=h @person.login %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @person.password %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%=h @person.age %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @person.name %>
+</p>
+
+<p>
+  <b>Last login:</b>
+  <%=h @person.last_login %>
+</p>
+
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
