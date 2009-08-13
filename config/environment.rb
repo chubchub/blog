@@ -3,6 +3,7 @@
 #done master here 1
 # done 1 experimental
 # try1 chnage
+# try2 change
 # Be sure to restart your server when you modify this file
 
 # Uncomment below to force Rails into production mode when
@@ -42,7 +43,7 @@ Rails::Initializer.run do |config|
   # Force all environments to use the same logger level
   # (by default production uses :info, the others :debug)
   # config.log_level = :debug
-
+  config.action_view[:debug_rjs] = true 
   # Make Time.zone default to the specified zone, and make Active Record store time values
   # in the database in UTC, and return them converted to the specified local zone.
   # Run "rake -D time" for a list of tasks for finding time zone names. Comment line to use default local time.
@@ -70,3 +71,5 @@ Rails::Initializer.run do |config|
   # Activate observers that should always be running
   # config.active_record.observers = :cacher, :garbage_collector
 end
+
+require 'bleak_house' if ENV['BLEAK_HOUSE'] 

@@ -66,9 +66,15 @@ class BlogsController < ApplicationController
   # PUT /blogs/1.xml
   def update
     @blog = Blog.find(params[:id])
+        logger.debug "== == == == == == == == == ==="
+        logger.debug @blog.to_yaml
+    logger.debug " - - - - - -  - - - "
 
     respond_to do |format|
       if @blog.update_attributes(params[:blog])
+            logger.debug "== [  2  ] == == == == == == == == ==="
+            logger.debug @blog.to_yaml
+        logger.debug " - - - - - -  - - - "
         flash[:notice] = 'Blog was successfully updated.'
         format.html { redirect_to(@blog) }
         format.xml  { head :ok }

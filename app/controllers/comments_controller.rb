@@ -40,8 +40,11 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.xml
   def create
+    debugger 
     @comment = Comment.new(params[:comment])
-
+    logger.debug "== == == == == == == == == ==="
+    logger.debug @comment.to_yaml
+logger.debug " - - - - - -  - - - "
     respond_to do |format|
       if @comment.save
         flash[:notice] = 'Comment was successfully created.'
