@@ -2,6 +2,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.xml
   def index
+    puts 'temp'
     @blogs = Blog.find(:all)
 
     respond_to do |format|
